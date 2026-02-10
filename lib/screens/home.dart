@@ -86,7 +86,7 @@ class _HomeState extends State<Home> {
                           SnackBar(
                             content: const Text(
                               textAlign: TextAlign.center,
-                              'Removed from favorites',
+                              'Removed from saved',
                               style: TextStyle(
                                 color: Colors.white,
                                 fontSize: 16,
@@ -116,7 +116,7 @@ class _HomeState extends State<Home> {
                           SnackBar(
                              content: const Text(
                               textAlign: TextAlign.center,
-                              'Saved to favorites',
+                              'Item saved',
                               style: TextStyle(
                                 color: Colors.white,
                                 fontSize: 16,

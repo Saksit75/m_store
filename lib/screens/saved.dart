@@ -24,7 +24,7 @@ class _SavedState extends State<Saved> {
         ),
         backgroundColor: Colors.blue,
       ),
-      body: saveData.isEmpty ? const Center(child: Text('ไม่พบข้อมูล')) : GridView.builder(
+      body: saveData.isEmpty ? const Center(child: Text('No saved items')) : GridView.builder(
         padding: const EdgeInsets.all(8),
         itemCount: saveData.length,
         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
@@ -55,7 +55,7 @@ class _SavedState extends State<Saved> {
                     SnackBar(
                       content: const Text(
                         textAlign: TextAlign.center,
-                        'Removed from favorites',
+                        'Removed from saved',
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 16,
@@ -84,7 +84,7 @@ class _SavedState extends State<Saved> {
                     SnackBar(
                       content: const Text(
                         textAlign: TextAlign.center,
-                        'Saved to favorites',
+                        'Item saved',
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 16,
