@@ -1,11 +1,11 @@
-class CartItem {
+class CartModel {
   final int id;
   final String name;
   int quantity;
   final double price;
   final String imageUrl;
 
-  CartItem({
+  CartModel({
     required this.id,
     required this.name,
     required this.quantity,
@@ -14,4 +14,4 @@ class CartItem {
   });
 }
 
-List<CartItem> cartData = [];
+List<CartModel> cartData = [];

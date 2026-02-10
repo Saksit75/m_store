@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:m_store/models/save_item.dart';
+import 'package:m_store/models/save_model.dart';
 import 'package:m_store/widgets/product_card.dart';
 
 class Saved extends StatefulWidget {
@@ -24,7 +24,7 @@ class _SavedState extends State<Saved> {
         ),
         backgroundColor: Colors.blue,
       ),
-      body: GridView.builder(
+      body: saveData.isEmpty ? const Center(child: Text('ไม่พบข้อมูล')) : GridView.builder(
         padding: const EdgeInsets.all(8),
         itemCount: saveData.length,
         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
@@ -32,7 +32,7 @@ class _SavedState extends State<Saved> {
           childAspectRatio: 0.8,
         ),
         itemBuilder: (context, index) {
-          SaveItem saveItem = saveData[index];
+          SaveModel saveItem = saveData[index];
           bool isFavorite = saveData.any((e) => e.id == saveItem.id);
           return ProductCard(
             name: saveItem.name,
@@ -73,7 +73,7 @@ class _SavedState extends State<Saved> {
                   );
                 } else {
                   saveData.add(
-                    SaveItem(
+                    SaveModel(
                       id: saveItem.id,
                       name: saveItem.name,
                       imageUrl: saveItem.imageUrl,

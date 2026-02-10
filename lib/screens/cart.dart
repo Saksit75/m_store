@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:m_store/models/cart_item.dart';
+import 'package:m_store/models/cart_model.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
 import 'package:intl/intl.dart';
 
@@ -298,17 +298,17 @@ class _CartState extends State<Cart> {
         padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 15),
         decoration: BoxDecoration(
           color: Colors.white,
-          boxShadow: [
-            BoxShadow(
-              color: Colors.grey.withValues(alpha: 0.2),
-              spreadRadius: 5,
-              blurRadius: 7,
-              offset: const Offset(0, -3),
-            ),
-          ],
+          // boxShadow: [
+          //   BoxShadow(
+          //     color: Colors.grey.withValues(alpha: 0.2),
+          //     spreadRadius: 5,
+          //     blurRadius: 7,
+          //     offset: const Offset(0, -3),
+          //   ),
+          // ],
         ),
+          //SafeArea() ไม่ให้ติดต่อกับขอบหน้าจอ เช่น gesture หรือ notch
         child: SafeArea(
-          //ใหม่ให้ติดต่อกับขอบหน้าจอ เช่น gesture หรือ notch
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
@@ -338,9 +338,9 @@ class _CartState extends State<Cart> {
                     backgroundColor: cartData.isEmpty
                         ? Colors.grey
                         : Colors.blue,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10),
-                    ),
+                    // shape: RoundedRectangleBorder(
+                    //   borderRadius: BorderRadius.circular(10),
+                    // ),
                   ),
                   onPressed: () {
                     if (cartData.isNotEmpty) {

@@ -1,5 +1,5 @@
-class SaveItem {
-  SaveItem({
+class SaveModel {
+  SaveModel({
     required this.id,
     required this.name,
     required this.imageUrl,
@@ -11,5 +11,4 @@ class SaveItem {
   final String imageUrl;
   final double price;
 }
-List<SaveItem> saveData = [
-];
+List<SaveModel> saveData = [];
